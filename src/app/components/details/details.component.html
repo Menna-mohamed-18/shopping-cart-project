@@ -1,0 +1,64 @@
+@if(detailsProduct){
+<section class="md:w-[70%] w-[85%] main-sec mx-auto">
+  <h1 class="text-center text-3xl text-[#F77426] my-2">
+    {{ "productDetails.title" | translate }}
+  </h1>
+
+  <div class="grid md:grid-cols-[40%,60%] items-center gap-6 mt-7">
+    <div>
+      <div>
+        <div class="ms-7 xl:ms-0">
+          <img
+            [src]="detailsProduct.imageCover"
+            class="xl:w-80 w-60 xl:ps-10 pt-5 h-[280px]"
+            [alt]="detailsProduct.title"
+          />
+        </div>
+
+        <div class="xl:w-80 w-60 xl:ps-10 mt-2 ms-7 xl:ms-0">
+          <owl-carousel-o [options]="customOptions">
+            @for(detail of detailsProduct.images; track $index){
+            <ng-template carouselSlide>
+              <img [src]="detail" [alt]="detailsProduct.title" />
+            </ng-template>
+            }
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+
+    <div class="text xl:pb-16">
+      <h2 class="text-2xl">
+        {{ detailsProduct.title.split(" ", 2).join("") }}
+      </h2>
+      <p class="pt-5">
+        {{ detailsProduct.description }}
+      </p>
+      <h3 class="h6 pt-3 text-gray-500 font-bold">
+        {{ detailsProduct.category.name }}
+      </h3>
+
+      <div class="flex items-center xl:pt-10">
+        <span class="font-medium pe-28 mb-10 xl:mb-0 xl:pe-72">
+          {{ detailsProduct.price | currency : "GBP" }}
+        </span>
+        <div>
+          @for (num of [1,2,3,4,5].slice(0,detailsProduct.ratingsAverage ) ;
+          track $index){
+          <span><i class="fas fa-star text-yellow-300"></i></span>
+          } @if(detailsProduct.ratingsAverage % 1 !== 0 ){
+          <i class="fa-solid fa-star-half-stroke text-yellow-300"></i>
+          }
+          <span class="text-muted">
+            {{ detailsProduct.ratingsAverage }}
+          </span>
+        </div>
+      </div>
+
+      <button class="bg-[#F77426] w-52 rounded py-1 xl:mt-7">
+        + {{ "productDetails.addToCart" | translate }}
+      </button>
+    </div>
+  </div>
+</section>
+}

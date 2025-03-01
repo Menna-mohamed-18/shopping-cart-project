@@ -1,0 +1,43 @@
+<!-- <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    @for (product of products.slice(2,14) | search: text ; track product.id) {
+    <div class="card border overflow-hidden shadow relative bg-white">
+      <div [routerLink]="['/details', product.id]">
+        <div class="card-img">
+          <img
+            [src]="product.imageCover"
+            [alt]="product.title"
+            class="w-full h-[200px] object-contain"
+          />
+        </div>
+
+        <div class="card-body py-4 px-2 text-center">
+          <h4 class="text-xs">{{ product.category.name }}</h4>
+          <h3 class="font-medium">
+            {{ product.title | termtext : 2 }}
+          </h3>
+          <h3 class="text-[#F77426]">{{ product.price }} EGP</h3>
+        </div>
+      </div>
+
+      <div class="flex justify-center my-3">
+        <div
+          (click)="addCartItem(product.id)"
+          class="text-[12px] uppercase add border border-[#999999] px-3 py-[6px] mb-[6px] hover:bg-[#F77426] hover:text-white"
+        >
+          <i class="fa-solid fa-basket-shopping text-[14px]"></i>
+          add to cart
+        </div>
+
+        <div
+          (click)="toggleFavItem(product.id)"
+          [ngClass]="{
+            'bg-[#F77426] ': wishlist.includes(product.id),
+          }"
+          class="add border border-[#999999] px-3 pt-2 hover:bg-[#F77426]"
+        >
+          <i class="fa-regular fa-heart text-[21px]"></i>
+        </div>
+      </div>
+    </div>
+    }
+  </div> -->

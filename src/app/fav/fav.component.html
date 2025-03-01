@@ -1,0 +1,28 @@
+<section class="main-sec w-[75%] mx-auto">
+  <h1 class="text-center text-3xl text-[#F77426] pt-2 pb-7">
+    {{ "favorites.favorites" | translate }}
+  </h1>
+  <div class="grid md:grid-cols-3 gap-6">
+    @for(fav of favDetails.data ; track fav.id){
+    <div class="relative rounded border">
+      <div class="img">
+        <img
+          [src]="fav.imageCover"
+          class="w-full rounded-t h-[200px] object-contain"
+          alt=""
+        />
+      </div>
+      <div class="absolute right-3 top-2">
+        <i
+          class="fa-solid fa-heart text-[#F77426]"
+          (click)="removeAddedFav(fav.id)"
+        ></i>
+      </div>
+      <div class="text p-4">
+        <h3 class="font-medium">{{ fav.title | termtext : 2 }}</h3>
+        <h4 class="text-[14px]">{{ fav.description | termtext : 3 }}</h4>
+      </div>
+    </div>
+    }
+  </div>
+</section>

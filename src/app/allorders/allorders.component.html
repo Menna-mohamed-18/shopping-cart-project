@@ -1,0 +1,80 @@
+<section class="main-sec w-[98%] md:w-[70%] mx-auto">
+  <div class="title text-center text-3xl text-[#F77426] pt-2 pb-7">
+    <h1>{{ "home.my_order_item" | translate }}</h1>
+  </div>
+
+  <div class="carts mt-10 w-[97%] md:w-[70%] text-center mx-auto">
+    @for(item of orderItemsinformaion().slice(-4); track $index){
+
+    <div class="rounded border-[3px] p-5 mb-9 bg-[#f3f6f6f9]">
+      <div class="cart flex justify-between">
+        <h1 class="text-[#F77426] pe-5 text-[14px] md:text-[16px] font-medium">
+          {{ "allorders.numoforder" | translate }}:
+          <span class="text-black">{{ $index + 1 }}</span>
+        </h1>
+        <span class="text-[#F77426] text-[14px] md:text-[16px] font-medium">
+          {{ "allorders.spanroduct" | translate }}:
+          <span class="text-black">{{ item.cartItems.length }}</span>
+        </span>
+      </div>
+
+      <div class="grid grid-cols-[60%,40%]">
+        <div class="text-cart text-left mt-8 pt-2">
+          <p class="text-gray-600">
+            {{ "allorders.email" | translate }}:
+            <span class="text-black">{{ item.user.email }}</span>
+          </p>
+
+          <p class="text-gray-800">
+            {{ "allorders.name" | translate }}:
+            <span class="text-black">{{ item.user.name }}</span>
+          </p>
+          <p class="text-gray-800">
+            {{ "allorders.date" | translate }}:
+            <span class="text-black">{{ item.createdAt | date }}</span>
+          </p>
+
+          <p class="text-gray-800">
+            {{ "allorders.phone" | translate }}:
+            <span class="text-black">{{ item.user.phone }}</span>
+          </p>
+
+          <p class="text-gray-800">
+            {{ "home.details" | translate }}:
+            <span class="text-black">{{ item.shippingAddress.details }}</span>
+          </p>
+          <p class="text-gray-800">
+            {{ "allorders.total" | translate }}:
+            <span class="text-black">{{
+              item.totalOrderPrice | currency : "GBP"
+            }}</span>
+          </p>
+          <p class="text-gray-800">
+            {{ "allorders.payment" | translate }}:
+            <span class="text-black">{{ item.paymentMethodType }}</span>
+          </p>
+
+          <p class="pt-12 text-[#F77426]">
+            {{ "allorders.total" | translate }}:
+            <span>{{ item.totalOrderPrice | currency : "GBP" }}</span>
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+          @for (image of item.cartItems ; track $index) {
+
+          <div class="item">
+            <img
+              class="w-20 h-20 object-contain py-1"
+              [src]="image.product.imageCover"
+              [alt]="image.product.title"
+            />
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    }
+  </div>
+</section>

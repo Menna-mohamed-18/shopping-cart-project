@@ -1,0 +1,62 @@
+<section class="main-sec w-3/4 md:w-1/2 mx-auto">
+  <h1 class="text-center text-[#F77426] text-3xl">checkout</h1>
+  <form [formGroup]="checkOutForm">
+    <div class="mb-1">
+      <label
+        for="details "
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >details</label
+      >
+      <textarea
+        formControlName="details"
+        id="details"
+        class="bg-white border w-full border-gray-300 text-gray-900 text-sm rounded-lg"
+      ></textarea>
+    </div>
+
+    <div class="mb-1">
+      <label
+        for="phone "
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >phone</label
+      >
+      <input
+        type="tel"
+        formControlName="phone"
+        id="phone"
+        class="bg-white w-full border border-gray-300 text-gray-900 text-sm rounded-lg"
+      />
+    </div>
+
+    <div class="mb-1">
+      <label
+        for="city "
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >city</label
+      >
+      <input
+        type="text"
+        formControlName="city"
+        id="city"
+        class="bg-white w-full border border-gray-300 text-gray-900 text-sm rounded-lg"
+      />
+    </div>
+
+    <button
+      [disabled]="checkOutForm.invalid"
+      (click)="onSubmitcard()"
+      class="bg-[#F77426] px-2 py-1 md:px-3 md:py-2 rounded-md mx-3 my-3"
+      type="submit"
+    >
+      Online payment
+    </button>
+
+    <button
+      (click)="onSubmitCash()"
+      class="bg-[#F77424] px-2 py-1 md:px-3 md:py-2 rounded-md my-2 ms-3 md:ms-0"
+      type="button"
+    >
+      Cash payment
+    </button>
+  </form>
+</section>

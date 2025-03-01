@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<ngx-spinner name="loading-1" type="ball-scale-multiple"></ngx-spinner>
+<ngx-spinner name="loading-2" type="timer.css"></ngx-spinner>
+
+<ngx-spinner
+  name="loading-3"
+  bdColor="rgba(0, 0, 0, .6)"
+  template="
+  <div style='display: flex; align-items: center; gap: 10px;'>
+    <img class='w-[60px]' src='/images/site-logo.png' />
+    <div>
+        <h1 class='text-[#F77426] text-[24px] font-medium'>Shopping Cart</h1>
+        <h5 class='font-light'>Build Your Own Online Store</h5 >
+    </div>
+  </div>
+"
+>
+  <h3 class="text-white text-[17px]">Loading.....</h3>
+</ngx-spinner>

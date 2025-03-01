@@ -1,0 +1,110 @@
+{
+    "navbar":{
+        "store_name": "سلة التسوق",
+        "tagline": "أنشئ متجرك الإلكتروني الخاص",
+        "home": "الرئيسية",
+        "sections": "الأقسام",
+        "cart": "عربة التسوق",
+        "brands": "العلامات التجارية",
+        "categories": "الفئات",
+        "search_placeholder": "ابحث عن المنتجات...",
+        "total": "الإجمالي",
+        "logout": "تسجيل الخروج",
+         "login":"تسجيل الدخول",
+        "register":"سجل",
+        "Lang":"اللغه",
+        "search_products":"البحث عن المنتجات"
+    },
+    "login":{
+        "login_now": "تسجيل الدخول الآن",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "enter_valid_password": "أدخل كلمة مرور صالحة",
+        "forgot_password": "نسيت كلمة المرور",
+        "sign_in": "تسجيل الدخول",
+          "password_is_required": "كلمة المرور مطلوبة",
+          "email_is_required":"البريد الإلكتروني مطلوب",
+          "enter_valid_email":"ادخل البريد الالكتروني صالح"
+    },
+    "register":{
+        "register_now": "سجل الآن",
+        "name": "الاسم",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "repassword": "تأكيد كلمة المرور",
+        "phone": "رقم الهاتف",
+        "sign_up": "إنشاء حساب",
+          "name_is_required":"الاسم مطلوب",
+          "enter_valid_name":"ادخل الاسم صالح",
+            "email_is_required":"البريد الإلكتروني مطلوب",
+          "enter_valid_email":"ادخل البريد الالكتروني صالح",
+          "password_is_required": "كلمة المرور مطلوبة",
+        "enter_valid_password": "أدخل كلمة مرور صالحة",
+        "phone_is_required": "رقم الهاتف مطلوب",
+        "enter_valid_phone":"ادخل رقم الهاتف صالح",
+    "repassword_incorrect": "معلومات تأكيد كلمة المرور غير صحيحة",
+      "name_min_length": "يجب أن يكون الاسم على الأقل 3 أحرف",
+    "name_max_length": "يجب ألا يزيد الاسم عن 20 حرفًا"
+    },
+    "home":{
+        "deals_of_the_day": "عروض اليوم",
+        "consumer_electronics": "الإلكترونيات الاستهلاكية",
+        "sports_health": "الرياضة والصحة",
+        "babies_toys": "ألعاب الأطفال",
+        "groceries_pets": "البقالة والحيوانات الأليفة",
+        "home_lifestyle": "المنزل ونمط الحياة",
+        "womens_fashion": "أزياء النساء",
+        "mens_fashion": "أزياء الرجال",
+        "watches_accessories": "الساعات والإكسسوارات",
+        "popular_brands": "العلامات التجارية الشهيرة",
+        "popular_products": "المنتجات الشائعة",
+        "add_to_cart": "أضف إلى السلة",
+        "all_products":"جميع المنتجات",
+          "my_order_item": "طلباتي",
+         "details": "التفاصيل"
+    },
+    "cart":{
+        "shop_cart": "عربة التسوق",
+        "total_cart_price": "إجمالي سعر العربة",
+        "clear_cart": "مسح العربة",
+        "woman_shawl": "وشاح نسائي",
+        "price": "السعر",
+        "remove": "إزالة",
+        "checkout": "إتمام الشراء",
+        "No_Data_Founded":"لا يوجد بيانات"
+    },
+    "brands":{
+       "brands" :"العلامات التجارية"
+    },
+    "categories":{
+        "categories":"الفئات" 
+     },
+     "favorites":{
+        "favorites" :"المفضله"   
+     },
+     
+  "allorders": {
+    "numoforder": "رقم الطلب",
+    "spanroduct": "عدد المنتجات",
+    "email": "البريد الإلكتروني",
+    "name": "الاسم",
+    "date": "التاريخ",
+    "phone": "رقم الهاتف",
+    "total": "الإجمالي",
+    "payment": "طريقة الدفع"
+  }
+  ,
+  "productDetails": {
+    "title": "تفاصيل المنتج",
+    "name": "الاسم",
+    "material": "الخامة",
+    "color": "اللون",
+    "department": "القسم",
+    "category": "الفئة",
+    "price": "السعر",
+    "addToCart": "أضف إلى السلة",
+    "rating": "التقييم"
+  }
+    
+
+}

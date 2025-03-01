@@ -1,0 +1,72 @@
+@if(cartDetails.totalCartPrice){
+<section class="main-sec w-[75%] mx-auto">
+  <h1 class="text-center text-3xl text-[#F77426] pt-2 pb-7">
+    {{ "cart.shop_cart" | translate }}
+  </h1>
+
+  <div class="flex items-center justify-between mb-5">
+    <span class="text-[#F77426]"
+      >{{ "cart.total_cart_price" | translate }}:{{
+        cartDetails.totalCartPrice | currency : "GBP"
+      }}</span
+    >
+
+    <button
+      (click)="clearItems()"
+      class="bg-[#E20D0F] border rounded text-xs px-2 md:px-5 py-2 text-white"
+    >
+      {{ "cart.clear_cart" | translate }}
+    </button>
+  </div>
+
+  @for(prod of cartDetails.products ; track prod.product._id){
+  <div class="grid md:grid-cols-[10%_minmax(0,1fr)] border-b mb-2">
+    <div>
+      <img
+        [src]="prod.product.imageCover"
+        class="w-full h-[100px] object-contain"
+        [alt]="prod.product.title"
+      />
+    </div>
+
+    <div class="flex justify-between items-center">
+      <div>
+        <h3 class="text-[14px] md:text-[16px]">{{ prod.product.title }}</h3>
+        <h4 class="text-[14px] md:text-[16px]">
+          {{ "cart.price" | translate }}: {{ prod.price | currency : "GBP" }}
+        </h4>
+        <button (click)="removeItem(prod.product.id)">
+          <i class="fas fa-trash-can text-[#F77426]"></i>
+          {{ "cart.remove" | translate }}
+        </button>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button
+          (click)="updateCount(prod.product.id, prod.count + 1)"
+          class="text-[#F77426] text-3xl"
+        >
+          <i class="fa-regular fa-square-plus"></i>
+        </button>
+        <span>{{ prod.count }}</span>
+        <button
+          (click)="updateCount(prod.product.id, prod.count - 1)"
+          class="text-[#F77426] text-3xl"
+        >
+          <i class="fa-regular fa-square-minus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+
+  <button
+    class="bg-[#F77426] px-8 py-2 rounded-md my-3"
+    [routerLink]="['/checkout', cartDetails._id]"
+  >
+    {{ "cart.checkout" | translate }}
+  </button>
+</section>
+} @else {
+<h1>{{ "cart.No_Data_Founded" | translate }}</h1>
+}

@@ -1,0 +1,16 @@
+<section class="main-sec w-[95%] mx-auto">
+  <h1 class="text-center text-3xl text-[#F77426] pt-2 pb-9">
+    {{ "categories.categories" | translate }}
+  </h1>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+    @for(cat of categories ; track cat._id){
+    <div>
+      <div class="border-4 p-[6px] rounded-md">
+        <img [src]="cat.image" [alt]="cat.name" class="h-[250px] w-full" />
+      </div>
+      <h2>{{ cat.name }}</h2>
+    </div>
+    }
+  </div>
+</section>

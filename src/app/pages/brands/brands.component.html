@@ -1,0 +1,16 @@
+<section class="main-sec w-[95%] mx-auto">
+  <h1 class="text-center text-3xl text-[#F77426] pt-2 pb-7">
+    {{ "brands.brands" | translate }}
+  </h1>
+  <div class="grid grid-cols-5 md:grid-cols-6 gap-3">
+    @for(brand of brands ; track brand._id){
+    <div class="">
+      <img
+        [src]="brand.image"
+        [alt]="brand.name"
+        class="hover:border-[#F77426] hover:border-[3px] border rounded-md"
+      />
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,620 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>shopping documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">shopping documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NavbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/layouts/navbar/navbar.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navbar</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>RouterLink</code>
+                            <code>RouterLinkActive</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navbar.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./navbar.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isLogin" >isLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isLogin" >isLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLogin"></a>
+                        <b>isLogin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/layouts/navbar/navbar.component.ts:13</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLogin"></a>
+                    <span class="name">
+                        <span ><b>isLogin</b></span>
+                        <a href="#isLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/layouts/navbar/navbar.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, input } from &#x27;@angular/core&#x27;;
+import { RouterLink, RouterLinkActive } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-navbar&#x27;,
+  imports: [RouterLink , RouterLinkActive],
+  templateUrl: &#x27;./navbar.component.html&#x27;,
+  styleUrl: &#x27;./navbar.component.scss&#x27;
+})
+export class NavbarComponent {
+
+
+  isLogin &#x3D; input&lt;boolean&gt;(true)
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;nav class&#x3D;&quot;bg-white border-gray-200 dark:bg-gray-900&quot;&gt;
+    &lt;div class&#x3D;&quot;max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4&quot;&gt;
+        &lt;ul class&#x3D;&quot;  flex flex-col p-2 md:p-0 mt-2   sm:border-none md:border-gray-100 rounded-lg  md:flex-row md:space-x-2 text-[13px] rtl:space-x-reverse md:mt-0 border-0 md:bg-white &quot;&gt;
+        
+            &lt;li&gt;
+                &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot; py-2 px-3  text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0&quot;&gt;
+                    &lt;i class&#x3D;&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt; Themefreesia, Abc Building, 5th Floor, Zyz Street
+                &lt;/a&gt;
+              &lt;/li&gt;
+&lt;div class&#x3D;&quot;flex xs:flex-col &quot;&gt;
+    &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot; py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426]   md:p-0&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-phone-square&quot;&gt;&lt;/i&gt; (123) 456-7890
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot; py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426] md:p-0&quot;&gt;
+          &lt;i class&#x3D;&quot;fa fa-envelope&quot;&gt;&lt;/i&gt; support.com
+        &lt;/a&gt;
+      &lt;/li&gt;
+&lt;/div&gt;
+           
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot; py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426] md:p-0&quot;&gt;
+                &lt;i class&#x3D;&quot;fab fa-skype&quot;&gt;&lt;/i&gt;  themefreesia
+              &lt;/a&gt;
+            &lt;/li&gt;
+          
+          &lt;/ul&gt;
+
+          
+      &lt;button data-collapse-toggle&#x3D;&quot;navbar-default&quot; type&#x3D;&quot;button&quot; class&#x3D;&quot;inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600&quot; aria-controls&#x3D;&quot;navbar-default&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+          &lt;span class&#x3D;&quot;sr-only&quot;&gt;Open main menu&lt;/span&gt;
+          &lt;svg class&#x3D;&quot;w-5 h-5&quot; aria-hidden&#x3D;&quot;true&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; fill&#x3D;&quot;none&quot; viewBox&#x3D;&quot;0 0 17 14&quot;&gt;
+              &lt;path stroke&#x3D;&quot;currentColor&quot; stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; stroke-width&#x3D;&quot;2&quot; d&#x3D;&quot;M1 1h15M1 7h15M1 13h15&quot;/&gt;
+          &lt;/svg&gt;
+      &lt;/button&gt;
+
+
+
+      &lt;div class&#x3D;&quot;hidden sm:hidden w-full md:block md:w-auto&quot; id&#x3D;&quot;navbar-default&quot;&gt;
+        &lt;ul class&#x3D;&quot;capitalize text-[14px] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white &quot;&gt;
+            &lt;div class&#x3D;&quot;hidden md:flex menna&quot;&gt;
+                &lt;li class&#x3D;&quot;px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-linkedin&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-dribbble&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;pe-5 px-2&quot;&gt;
+                    &lt;a role&#x3D;&quot;button&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                        &lt;i class&#x3D;&quot;fab fa-pinterest&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/div&gt;
+    @if(!isLogin()){
+        &lt;li&gt;
+            &lt;a role&#x3D;&quot;button&quot; routerLink&#x3D;&quot;login&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                &lt;i class&#x3D;&quot;fa-solid fa-unlock&quot;&gt;&lt;/i&gt; login
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a role&#x3D;&quot;button&quot; routerLink&#x3D;&quot;register&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+                &lt;i class&#x3D;&quot;fa-solid fa-user-plus&quot;&gt;&lt;/i&gt; register
+            &lt;/a&gt;
+        &lt;/li&gt;
+    }@else {  &lt;li&gt;
+        &lt;a role&#x3D;&quot;button&quot; routerLink&#x3D;&quot;logout&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white&quot;&gt;
+            &lt;i class&#x3D;&quot;fas fa-sign-out-alt&quot;&gt;&lt;/i&gt; logout
+        &lt;/a&gt;
+    &lt;/li&gt;}
+           
+          
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  
+
+&lt;nav class&#x3D;&quot;bg-white border-gray-200 dark:bg-gray-900&quot;&gt;
+    &lt;div class&#x3D;&quot;flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4 &quot;&gt;
+        &lt;a routerLink&#x3D;&quot;/home&quot; class&#x3D;&quot;flex items-center space-x-3 rtl:space-x-reverse &quot;&gt;
+            &lt;img src&#x3D;&quot;/images/site-logo.png&quot; class&#x3D;&quot; size-[60px]&quot; alt&#x3D;&quot;Shopping logo&quot; /&gt;
+            &lt;div class&#x3D;&quot;block&quot;&gt;
+                &lt;p class&#x3D;&quot;self-center text-[28px] font-semibold whitespace-nowrap text-[#F77426] dark:text-white&quot;&gt; Shopping Cart &lt;/p&gt;
+                &lt;p class&#x3D;&quot;text-[11px] uppercase&quot;&gt; Build Your Own Online Store &lt;/p&gt;
+            &lt;/div&gt;
+        
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;flex items-center space-x-4 md:pt-0 pt-3 rtl:space-x-reverse&quot;&gt;
+            &lt;form role&#x3D;&quot;search&quot; class&#x3D;&quot;flex&quot;&gt;
+                &lt;label class&#x3D;&quot;screen-reader-text&quot; for&#x3D;&quot;search&quot;&gt;&lt;/label&gt;
+                &lt;input type&#x3D;&quot;search&quot; id&#x3D;&quot;search&quot; 
+                    class&#x3D;&quot;search-field lg:px-24 px-5 text-base border-[#F77426] border-2  focus:ring-0 focus:border-[#F77426]&quot;
+                    placeholder&#x3D;&quot;Search products…&quot; name&#x3D;&quot;s&quot;&gt;
+        
+                &lt;button type&#x3D;&quot;submit&quot; 
+                    class&#x3D;&quot;lg:px-10 px-5 text-base text-white bg-[#F77426] focus:outline-none &quot;&gt;
+                    &lt;i class&#x3D;&quot;fas fa-search&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/form&gt;
+        
+            &lt;a href&#x3D;&quot;&quot;&gt;
+                &lt;i class&#x3D;&quot;fa-regular fa-heart text-[21px] text-[#999999]&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        
+            &lt;a&gt;
+                &lt;i class&#x3D;&quot;fa-solid fa-basket-shopping text-[21px] text-[#999999]&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        
+            &lt;div class&#x3D;&quot;my-cart-wrap&quot;&gt;
+                &lt;div class&#x3D;&quot;my-cart text-[12px] text-[#333333] font-bold&quot;&gt;Total&lt;/div&gt;
+                &lt;div class&#x3D;&quot;cart-total text-[12px] text-[#333333] &quot;&gt;$120.00&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+
+           @if(isLogin()){
+            &lt;nav class&#x3D;&quot;border mt-2&quot;&gt;
+                &lt;div class&#x3D;&quot;max-w-screen-xl px-4 py-3 mx-auto&quot;&gt;
+                    &lt;div class&#x3D;&quot;flex items-center&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex-row font-normal mt-0 space-x-8 rtl:space-x-reverse text-sm relative&quot;&gt;
+                &lt;li&gt;
+                    &lt;a routerLink&#x3D;&quot;/home&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa-solid fa-house&quot;&gt;&lt;/i&gt; Home
+                    &lt;/a&gt;
+                &lt;/li&gt;
+
+       
+                &lt;li class&#x3D;&quot;relative group&quot;&gt;
+                    &lt;a routerLink&#x3D;&quot;sections&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;text-[#5a5a5a] text-[14px] dark:text-white flex items-center hover:text-[#F77426]&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa-solid fa-list&quot;&gt;&lt;/i&gt;   Sections
+                        &lt;i class&#x3D;&quot;fa-solid fa-chevron-down ml-1 text-xs&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    
+                    &lt;ul class&#x3D;&quot;absolute left-0 mt-1 w-40 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300&quot;&gt;
+                        &lt;li&gt;&lt;a routerLink&#x3D;&quot;cart&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-cart-shopping&quot;&gt;&lt;/i&gt; Cart&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a routerLink&#x3D;&quot;shop&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-shop&quot;&gt;&lt;/i&gt; Shop&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a routerLink&#x3D;&quot;contact&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-envelope&quot;&gt;&lt;/i&gt; Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;a routerLink&#x3D;&quot;/shop&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa-solid fa-cart-shopping&quot;&gt;&lt;/i&gt; Shop
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a routerLink&#x3D;&quot;/blog&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa-solid fa-file-lines&quot;&gt;&lt;/i&gt; Blog
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a routerLink&#x3D;&quot;/contact&quot; routerLinkActive&#x3D;&quot;text-[#F77426]&quot; class&#x3D;&quot;text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]&quot;&gt;
+                        &lt;i class&#x3D;&quot;fa-solid fa-envelope&quot;&gt;&lt;/i&gt; Contact Us
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+           }
+           
+
+
+
+
+
+  
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nav class="bg-white border-gray-200 dark:bg-gray-900">    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">        <ul class="  flex flex-col p-2 md:p-0 mt-2   sm:border-none md:border-gray-100 rounded-lg  md:flex-row md:space-x-2 text-[13px] rtl:space-x-reverse md:mt-0 border-0 md:bg-white ">                    <li>                <a href="#" class=" py-2 px-3  text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0">                    <i class="fa fa-map-marker"></i> Themefreesia, Abc Building, 5th Floor, Zyz Street                </a>              </li><div class="flex xs:flex-col ">    <li>        <a href="#" class=" py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426]   md:p-0">          <i class="fa fa-phone-square"></i> (123) 456-7890        </a>      </li>      <li>        <a href="#" class=" py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426] md:p-0">          <i class="fa fa-envelope"></i> support.com        </a>      </li></div>                       <li>              <a href="#" class=" py-2 px-3 text-[#333333]  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#F77426] md:p-0">                <i class="fab fa-skype"></i>  themefreesia              </a>            </li>                    </ul>                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">          <span class="sr-only">Open main menu</span>          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>          </svg>      </button>      <div class="hidden sm:hidden w-full md:block md:w-auto" id="navbar-default">        <ul class="capitalize text-[14px] flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white ">            <div class="hidden md:flex menna">                <li class="px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-facebook"></i>                    </a>                </li>                <li class="px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-twitter"></i>                    </a>                </li>                <li class="px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-instagram"></i>                    </a>                </li>                <li class="px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-linkedin"></i>                    </a>                </li>                <li class="px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-dribbble"></i>                    </a>                </li>                <li class="pe-5 px-2">                    <a role="button" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                        <i class="fab fa-pinterest"></i>                    </a>                </li>            </div>    @if(!isLogin()){        <li>            <a role="button" routerLink="login" routerLinkActive="text-[#F77426]" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                <i class="fa-solid fa-unlock"></i> login            </a>        </li>        <li>            <a role="button" routerLink="register" routerLinkActive="text-[#F77426]" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">                <i class="fa-solid fa-user-plus"></i> register            </a>        </li>    }@else {  <li>        <a role="button" routerLink="logout" routerLinkActive="text-[#F77426]" class="block py-2 px-3 rounded-sm md:border-0 text-[#5a5a5a]  md:hover:bg-transparent  md:hover:text-[#F77426]  md:p-0 dark:text-white">            <i class="fas fa-sign-out-alt"></i> logout        </a>    </li>}                             </ul>    </div>        </div>  </nav>  <nav class="bg-white border-gray-200 dark:bg-gray-900">    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4 ">        <a routerLink="/home" class="flex items-center space-x-3 rtl:space-x-reverse ">            <img src="/images/site-logo.png" class=" size-[60px]" alt="Shopping logo" />            <div class="block">                <p class="self-center text-[28px] font-semibold whitespace-nowrap text-[#F77426] dark:text-white"> Shopping Cart </p>                <p class="text-[11px] uppercase"> Build Your Own Online Store </p>            </div>                </a>        <div class="flex items-center space-x-4 md:pt-0 pt-3 rtl:space-x-reverse">            <form role="search" class="flex">                <label class="screen-reader-text" for="search"></label>                <input type="search" id="search"                     class="search-field lg:px-24 px-5 text-base border-[#F77426] border-2  focus:ring-0 focus:border-[#F77426]"                    placeholder="Search products…" name="s">                        <button type="submit"                     class="lg:px-10 px-5 text-base text-white bg-[#F77426] focus:outline-none ">                    <i class="fas fa-search"></i>                </button>            </form>                    <a href="">                <i class="fa-regular fa-heart text-[21px] text-[#999999]"></i>            </a>                    <a>                <i class="fa-solid fa-basket-shopping text-[21px] text-[#999999]"></i>            </a>                    <div class="my-cart-wrap">                <div class="my-cart text-[12px] text-[#333333] font-bold">Total</div>                <div class="cart-total text-[12px] text-[#333333] ">$120.00</div>            </div>        </div>            </div></nav>           @if(isLogin()){            <nav class="border mt-2">                <div class="max-w-screen-xl px-4 py-3 mx-auto">                    <div class="flex items-center">            <ul class="flex flex-row font-normal mt-0 space-x-8 rtl:space-x-reverse text-sm relative">                <li>                    <a routerLink="/home" routerLinkActive="text-[#F77426]" class="text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]">                        <i class="fa-solid fa-house"></i> Home                    </a>                </li>                       <li class="relative group">                    <a routerLink="sections" routerLinkActive="text-[#F77426]" class="text-[#5a5a5a] text-[14px] dark:text-white flex items-center hover:text-[#F77426]">                        <i class="fa-solid fa-list"></i>   Sections                        <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>                    </a>                                        <ul class="absolute left-0 mt-1 w-40 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">                        <li><a routerLink="cart" routerLinkActive="text-[#F77426]" class="block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>                        <li><a routerLink="shop" routerLinkActive="text-[#F77426]" class="block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"><i class="fa-solid fa-shop"></i> Shop</a></li>                        <li><a routerLink="contact" routerLinkActive="text-[#F77426]" class="block px-4 py-2 text-[#5a5a5a] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"><i class="fa-solid fa-envelope"></i> Contact</a></li>                    </ul>                </li>                <li>                    <a routerLink="/shop" routerLinkActive="text-[#F77426]" class="text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]">                        <i class="fa-solid fa-cart-shopping"></i> Shop                    </a>                </li>                <li>                    <a routerLink="/blog" routerLinkActive="text-[#F77426]" class="text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]">                        <i class="fa-solid fa-file-lines"></i> Blog                    </a>                </li>                <li>                    <a routerLink="/contact" routerLinkActive="text-[#F77426]" class="text-[#5a5a5a] text-[14px] dark:text-white hover:text-[#F77426]">                        <i class="fa-solid fa-envelope"></i> Contact Us                    </a>                </li>            </ul>        </div>    </div></nav>           }             </div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'BrandsComponent', 'selector': 'app-brands'},{'name': 'CartComponent', 'selector': 'app-cart'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'CheckoutComponent', 'selector': 'app-checkout'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'ProductsComponent', 'selector': 'app-products'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ShopComponent', 'selector': 'app-shop'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavbarComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

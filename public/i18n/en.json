@@ -1,0 +1,108 @@
+{
+    "navbar":{
+        "store_name": "Shopping Cart",
+        "tagline": "BUILD YOUR OWN ONLINE STORE",
+        "home": "Home",
+        "sections": "Sections",
+        "cart": "Cart",
+        "brands": "Brands",
+        "categories": "Categories",
+        "search_placeholder": "Search products...",
+        "total": "Total",
+        "logout": "Logout",
+        "login":"LogIn",
+        "register":"Register",
+         "Lang":"Lang",
+         "search_products":"Search products"
+    },
+    "login":{
+        "login_now": "Login Now",
+        "email": "Email",
+        "password": "Password",
+        "enter_valid_password": "Enter Valid password",
+        "forgot_password": "Forgot Password",
+        "sign_in": "Sign In",
+        "password_is_required":"password is required",
+          "email_is_required": "Email is required",
+          "enter_valid_email":"Enter valid email"
+    },
+    "register":{
+        "register_now": "Register Now",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "repassword": "Confirm Password",
+        "phone": "Phone",
+        "sign_up": "Sign Up",
+        "name_is_required":"name is required",
+        "enter_valid_name":"Enter valid name",
+          "email_is_required":"Email_is_required",
+        "enter_valid_email":"Enter valid email",
+        "password_is_required": "Password is required",
+      "enter_valid_password": "Enter valid password",
+      "phone_is_required": "Phone is required",
+      "enter_valid_phone":"Enter valid phone",
+          "repassword_incorrect": "Re-entered password information is incorrect",
+             "name_min_length": "Name must be at least 3 characters",
+    "name_max_length": "Name must be at most 20 characters"
+    },
+    "home":{
+        "deals_of_the_day": "Deals of the Day",
+        "consumer_electronics": "Consumer Electronics",
+        "sports_health": "Sports & Health",
+        "babies_toys": "Babies & Toys",
+        "groceries_pets": "Groceries & Pets",
+        "home_lifestyle": "Home & Lifestyle",
+        "womens_fashion": "Women's Fashion",
+        "mens_fashion": "Men’s Fashion",
+        "watches_accessories": "Watches & Accessories",
+        "popular_brands": "Popular Brands",
+        "popular_products": "Popular Products",
+        "add_to_cart": "Add to Cart",
+         "all_products":"All Products",
+            "my_order_item": "My Orders",
+         "details": "Details"
+
+    },
+    "cart":{
+        "shop_cart": "Shop Cart",
+        "total_cart_price": "Total Cart Price",
+        "clear_cart": "Clear Cart",
+        "woman_shawl": "Woman Shawl",
+        "price": "Price",
+        "remove": "Remove",
+        "checkout": "Checkout",
+        "No_Data_Founded":"No Data Founded"
+    },
+    "brands":{
+        "brands" :"Brands"
+     },
+     "categories":{
+        "categories":"Categories" 
+     },
+     "favorites":{
+        "favorites" :"Favorites"   
+     },
+     "allorders": {
+        "numoforder": "Order Number",
+        "spanroduct": "Number of Products",
+        "email": "Email",
+        "name": "Name",
+        "date": "Date",
+        "phone": "Phone",
+        "total": "Total",
+        "payment": "Payment Method"
+      },
+      "home.details": "Details",
+      "productDetails": {
+        "title": "Details Products",
+        "name": "Name",
+        "material": "Material",
+        "color": "Color",
+        "department": "Department",
+        "category": "Category",
+        "price": "Price",
+        "addToCart": "Add To Cart",
+        "rating": "Rating"
+      }
+}

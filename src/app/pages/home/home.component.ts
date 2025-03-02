@@ -40,7 +40,7 @@ private readonly httpClient = inject(HttpClient);
 
 
 
-text:string = " ";
+text:string = '';
  isLogin:InputSignal<boolean> = input<boolean>(true)
 
   countCart:Signal<number> = computed(()=>this.cartService.cartNumber())

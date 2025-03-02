@@ -1,134 +1,139 @@
-<header class="mb-9">
-  <img
-    src="/images/person-people-girl-woman-hair-white-588481-pxhere.com_.jpg"
-    alt=""
-  />
-</header>
-<section class="bg-white p-6">
-  <div class="lg:grid sm:grid-cols-[20%_minmax(0,1fr)_20%]">
-    <div class="mb-5">
-      <div class="head-all pb-4 pt-3 text-[18px]">
-        <i class="fa-solid fa-bars text-gray-400 text-[20px] px-2"></i>
-        {{ "home.all_products" | translate }}
-      </div>
-
-      <div class="all-products">
-        <ul class="space-y-2">
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-orange-500 mr-2"></span>
-            {{ "home.deals_of_the_day" | translate }}
-            <div
-              class="h-4 w-8 bg-[#F77426] text-[9.5px] font-bold text-white ps-1 pt-[2px] mx-2"
-            >
-              HOT
-            </div>
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.consumer_electronics" | translate }}
-            <div
-              class="h-4 w-8 bg-[#F77426] text-[9.5px] font-bold text-white ps-1 pt-[2px] mx-2"
-            >
-              NEW
-            </div>
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.sports_health" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.babies_toys" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.groceries_pets" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.home_lifestyle" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.womens_fashion" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span
-            >{{ "home.mens_fashion" | translate }}
-          </li>
-          <li
-            class="flex items-center text-[14px] border-b border-gray-300 pb-2"
-          >
-            <span class="size-1 bg-[#F77426] mr-2"></span>
-            {{ "home.watches_accessories" | translate }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="md:mx-6">
-      <owl-carousel-o [options]="customMainSlider">
-        <ng-template carouselSlide>
-          <img
-            src="/images/mannequin-3616355.jpg"
-            alt="fashion img"
-            class="w-full h-[300px] md:h-[400px]"
-          />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img
-            src="/images/StockSnap_G2V8G1H1AQ.jpg"
-            alt="fashion img"
-            class="w-full h-[300px] md:h-[400px]"
-          />
-        </ng-template>
-        <ng-template carouselSlide>
-          <img
-            src="/images/girl-hair-female-pattern-model-spring-625342-pxhere.jpg"
-            alt="style photo"
-            class="w-full h-[300px] md:h-[400px]"
-          />
-        </ng-template>
-      </owl-carousel-o>
-    </div>
-
-    <div class="flex lg:block gap-5">
+<section class="mx-7">
+  <header class="mb-9">
+    <div class="">
       <img
-        src="/images/StockSnap_BXQV774BOY.jpg"
-        alt="style photo"
-        class="w-full h-[55px] lg:h-[133.333px] lg:pb-2"
-      />
-      <img
-        src="/images/ring-jewelry-jewellery-jewel-silver-bright-833724-pxhere.com_.jpg"
+        src="/images/person-people-girl-woman-hair-white-588481-pxhere.com_.jpg"
+        class="w-full"
         alt=""
-        class="w-full h-[55px] lg:h-[133.333px] lg:py-2"
-      />
-      <img
-        src="/images/tool-razor-utility-knife-small-appliances-home-appliances-1157294-pxhere.com_.jpg"
-        alt="style photo"
-        class="w-full h-[55px] lg:h-[133.333px] lg:pt-2"
       />
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- <section class="my-14">
+  <section class="bg-white p-6">
+    <div class="lg:grid sm:grid-cols-[20%_minmax(0,1fr)_20%]">
+      <div class="mb-5">
+        <div class="head-all pb-4 pt-3 text-[18px]">
+          <i class="fa-solid fa-bars text-gray-400 text-[20px] px-2"></i>
+          {{ "home.all_products" | translate }}
+        </div>
+
+        <div class="all-products">
+          <ul class="space-y-2">
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-orange-500 mr-2"></span>
+              {{ "home.deals_of_the_day" | translate }}
+              <div
+                class="h-4 w-8 bg-[#F77426] text-[9.5px] font-bold text-white ps-1 pt-[2px] mx-2"
+              >
+                HOT
+              </div>
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.consumer_electronics" | translate }}
+              <div
+                class="h-4 w-8 bg-[#F77426] text-[9.5px] font-bold text-white ps-1 pt-[2px] mx-2"
+              >
+                NEW
+              </div>
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.sports_health" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.babies_toys" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.groceries_pets" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.home_lifestyle" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.womens_fashion" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span
+              >{{ "home.mens_fashion" | translate }}
+            </li>
+            <li
+              class="flex items-center text-[14px] border-b border-gray-300 pb-2"
+            >
+              <span class="size-1 bg-[#F77426] mr-2"></span>
+              {{ "home.watches_accessories" | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md:mx-6">
+        <owl-carousel-o [options]="customMainSlider">
+          <ng-template carouselSlide>
+            <img
+              src="/images/mannequin-3616355.jpg"
+              alt="fashion img"
+              class="w-full h-[300px] md:h-[400px]"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="/images/StockSnap_G2V8G1H1AQ.jpg"
+              alt="fashion img"
+              class="w-full h-[300px] md:h-[400px]"
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="/images/girl-hair-female-pattern-model-spring-625342-pxhere.jpg"
+              alt="style photo"
+              class="w-full h-[300px] md:h-[400px]"
+            />
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+
+      <div class="flex lg:block gap-5">
+        <img
+          src="/images/StockSnap_BXQV774BOY.jpg"
+          alt="style photo"
+          class="w-full h-[45px] lg:h-[133.333px] lg:pb-2"
+        />
+        <img
+          src="/images/ring-jewelry-jewellery-jewel-silver-bright-833724-pxhere.com_.jpg"
+          alt=""
+          class="w-full h-[45px] lg:h-[133.333px] lg:py-2"
+        />
+        <img
+          src="/images/tool-razor-utility-knife-small-appliances-home-appliances-1157294-pxhere.com_.jpg"
+          alt="style photo"
+          class="w-full h-[45px] lg:h-[133.333px] lg:pt-2"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="my-14">
   <h2 class="text-2xl pb-3">popular categories</h2>
   <owl-carousel-o [options]="customOptions">
     @for (category of categories; track category._id) {
@@ -143,112 +148,116 @@
   </owl-carousel-o>
 </section> -->
 
-<section class="my-14 px-5 xl:px-0">
-  <h2 class="text-xl md:text-[30px] pb-8 md:pt-10 md:pb-12">
-    {{ "home.popular_brands" | translate }}
-  </h2>
-  <owl-carousel-o [options]="customOptions">
-    @for (brand of brands; track brand._id) {
+  <section class="my-14 px-5 xl:px-0">
+    <h2 class="text-xl md:text-[30px] pb-8 md:pt-10 md:pb-12">
+      {{ "home.popular_brands" | translate }}
+    </h2>
+    <owl-carousel-o [options]="customOptions">
+      @for (brand of brands; track brand._id) {
 
-    <ng-template carouselSlide>
-      <div class="">
+      <ng-template carouselSlide>
         <div class="">
-          <img
-            [src]="brand.image"
-            class="w-full h-[90px] md:h-[120px]"
-            [alt]="brand.name"
-          />
+          <div class="">
+            <img
+              [src]="brand.image"
+              class="w-full h-[90px] md:h-[120px]"
+              [alt]="brand.name"
+            />
+          </div>
+          <!-- <h3>{{ brand.name }}</h3> -->
         </div>
-        <h3>{{ brand.name }}</h3>
-      </div>
-    </ng-template>
-    }
-  </owl-carousel-o>
-</section>
+      </ng-template>
+      }
+    </owl-carousel-o>
+  </section>
 
-<section class="md:mb-14 mb-10 mt-16 md:mt-32 px-5 xl:px-0">
-  <h2 class="text-xl md:text-[30px] pb-6">
-    {{ "home.popular_products" | translate }}
-  </h2>
+  <section class="md:mb-14 mb-10 mt-16 md:mt-32 px-5 xl:px-0">
+    <h2 class="text-xl md:text-[30px] pb-6">
+      {{ "home.popular_products" | translate }}
+    </h2>
 
-  <div class="mb-6 mt-4 md:mt-9">
-    <label class="screen-reader-text" for="search"></label>
-    <input
-      type="text"
-      id="search"
-      [(ngModel)]="text"
-      class="search-field md:px-20 px-5 text-base border-[#F77426] border-2 focus:ring-0 focus:border-[#F77426]"
-      placeholder="{{ 'navbar.search_products' | translate }}..."
-      name="s"
-    />
+    <div class="mb-6 mt-4 md:mt-9 flex flex-nowrap">
+      <label class="screen-reader-text" for="search"></label>
+      <input
+        type="text"
+        id="search"
+        [(ngModel)]="text"
+        class="search-field md:px-20 px-5 border-[#F77426] border-2 focus:ring-0 focus:border-[#F77426]"
+        placeholder="{{ 'home.search_products' | translate }}..."
+        name="s"
+      />
 
-    <button
-      type="submit"
-      class="md:px-10 px-5 py-[9.7px] text-base text-white bg-[#F77426] focus:outline-none"
+      <button
+        type="submit"
+        class="md:px-10 px-5 py-[9.7px] text-base text-white bg-[#F77426] focus:outline-none"
+      >
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10 cursor-default"
     >
-      <i class="fas fa-search"></i>
+      @for (product of paginatedProducts()|search:text ; track product.id) {
+      <div class="card border overflow-hidden shadow relative bg-white">
+        <div [routerLink]="['/details', product.id]">
+          <div class="card-img">
+            <img
+              [src]="product.imageCover"
+              [alt]="product.title"
+              class="w-full h-[140px] md:h-[200px] object-contain"
+            />
+          </div>
+          <div class="card-body py-2 md:py-4 md:px-2 text-center">
+            <h4 class="text-xs">{{ product.category.name }}</h4>
+            <h3 class="font-medium">{{ product.title | termtext : 2 }}</h3>
+            <h3 class="text-[#F77426]">
+              {{ product.price | currency : "GBP" }}
+            </h3>
+          </div>
+        </div>
+        <div class="flex justify-center my-1 md:my-3">
+          <div
+            (click)="addCartItem(product.id, true)"
+            class="text-[12px] uppercase add px-3 py-[6px] mb-[6px] hover:bg-[#F77426] hover:text-white border border-[#999999]"
+          >
+            <i class="fa-solid fa-basket-shopping text-[14px]"></i>
+
+            <span class="text-[9px] md:text-[13px]">{{
+              "home.add_to_cart" | translate
+            }}</span>
+          </div>
+          <div
+            (click)="toggleFavItem(product.id)"
+            [ngClass]="{ 'bg-[#F77426] ': wishlist.includes(product.id) }"
+            class="add border border-[#999999] px-3 pt-2 hover:bg-[#F77426]"
+          >
+            <i class="fa-regular fa-heart text-[21px]"></i>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <div class="flex justify-center mt-6">
+    <button
+      (click)="changePage(false)"
+      [disabled]="currentPage === 1"
+      class="px-[8px] py-[2px] border rounded bg-gray-200 mx-2"
+    >
+      <i class="fa-solid fa-arrow-left" style="color: #f77426"></i>
+    </button>
+    <span
+      class="px-[9px] mx-3 py-[2px] border-2 bg-gray-100 border-[#F77426]"
+      >{{ currentPage }}</span
+    >
+    <button
+      (click)="changePage(true)"
+      [disabled]="currentPage >= Math.ceil(products().length / itemsPerPage)"
+      class="px-[8px] py-[2px] border rounded bg-gray-200 mx-2"
+    >
+      <i class="fa-solid fa-arrow-right" style="color: #f77426"></i>
     </button>
   </div>
-
-  <div
-    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10 cursor-default"
-  >
-    @for (product of paginatedProducts()|search:text ; track product.id) {
-    <div class="card border overflow-hidden shadow relative bg-white">
-      <div [routerLink]="['/details', product.id]">
-        <div class="card-img">
-          <img
-            [src]="product.imageCover"
-            [alt]="product.title"
-            class="w-full h-[140px] md:h-[200px] object-contain"
-          />
-        </div>
-        <div class="card-body py-2 md:py-4 md:px-2 text-center">
-          <h4 class="text-xs">{{ product.category.name }}</h4>
-          <h3 class="font-medium">{{ product.title | termtext : 2 }}</h3>
-          <h3 class="text-[#F77426]">{{ product.price | currency : "GBP" }}</h3>
-        </div>
-      </div>
-      <div class="flex justify-center my-1 md:my-3">
-        <div
-          (click)="addCartItem(product.id, true)"
-          class="text-[12px] uppercase add px-3 py-[6px] mb-[6px] hover:bg-[#F77426] hover:text-white border border-[#999999]"
-        >
-          <i class="fa-solid fa-basket-shopping text-[14px]"></i>
-
-          <span class="text-[9px] md:text-[13px]">{{
-            "home.add_to_cart" | translate
-          }}</span>
-        </div>
-        <div
-          (click)="toggleFavItem(product.id)"
-          [ngClass]="{ 'bg-[#F77426] ': wishlist.includes(product.id) }"
-          class="add border border-[#999999] px-3 pt-2 hover:bg-[#F77426]"
-        >
-          <i class="fa-regular fa-heart text-[21px]"></i>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
 </section>
-
-<div class="flex justify-center mt-6">
-  <button
-    (click)="changePage(false)"
-    [disabled]="currentPage === 1"
-    class="px-[8px] py-[2px] border rounded bg-gray-200 mx-2"
-  >
-    <i class="fa-solid fa-arrow-left" style="color: #f77426"></i>
-  </button>
-  <span class="px-[9px] mx-3 py-[2px] border-2 bg-gray-100 border-[#F77426]">{{
-    currentPage
-  }}</span>
-  <button
-    (click)="changePage(true)"
-    [disabled]="currentPage >= Math.ceil(products().length / itemsPerPage)"
-    class="px-[8px] py-[2px] border rounded bg-gray-200 mx-2"
-  >
-    <i class="fa-solid fa-arrow-right" style="color: #f77426"></i>
-  </button>
-</div>

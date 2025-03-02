@@ -61,7 +61,9 @@
         "add_to_cart": "أضف إلى السلة",
         "all_products":"جميع المنتجات",
           "my_order_item": "طلباتي",
-         "details": "التفاصيل"
+         "details": "التفاصيل",
+        "search_products":"البحث عن المنتجات"
+
     },
     "cart":{
         "shop_cart": "عربة التسوق",
@@ -104,6 +106,14 @@
     "price": "السعر",
     "addToCart": "أضف إلى السلة",
     "rating": "التقييم"
+  },
+  "footer":{
+    "title": "احصل على تطبيق التسوق",
+    "description": "سوف نرسل لك رابطًا، افتحه على هاتفك لتحميل التطبيق",
+    "email_placeholder": "البريد الإلكتروني",
+    "payment_partners": "شركاء الدفع",
+    "share_app_link": "مشاركة رابط التطبيق",
+    "get_deliveries": "احصل على التوصيل مع التسوق"
   }
     
 

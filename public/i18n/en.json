@@ -61,7 +61,9 @@
         "add_to_cart": "Add to Cart",
          "all_products":"All Products",
             "my_order_item": "My Orders",
-         "details": "Details"
+         "details": "Details",
+         "search_products":"Search products"
+
 
     },
     "cart":{
@@ -104,5 +106,13 @@
         "price": "Price",
         "addToCart": "Add To Cart",
         "rating": "Rating"
+      },
+      "footer":{
+        "title": "Get The Shopping App",
+        "description": "We will send you a link, open it on your phone to download the app",
+        "email_placeholder": "Email",
+        "payment_partners": "Payment partners",
+        "share_app_link": "Share App Link",
+        "get_deliveries": "Get Deliveries with shopping"
       }
 }

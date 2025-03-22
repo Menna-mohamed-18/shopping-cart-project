@@ -103,7 +103,7 @@
       <button
         [disabled]="isLoding"
         type="submit"
-        class="bg-[#F77426] text-white px-12 py-2 my-2 border rounded hover:bg-orange-500 transition-colors duration-500"
+        class="bg-[#F77426] text-white px-6 md:px-12 py-2 my-2 border rounded hover:bg-orange-500 transition-colors duration-500"
       >
         {{ "login.sign_in" | translate }} @if (isLoding) {
         <span><i class="fas fa-spin fa-spinner"></i></span>
@@ -120,4 +120,13 @@
 
     }
   </form>
+
+  <div class="text-center text-[13px] my-3">
+    <h5>
+      Don’t have an account?
+      <a routerLink="/register" class="hover:border-b-2 hover:border-black">
+        Sign Up</a
+      >
+    </h5>
+  </div>
 </section>

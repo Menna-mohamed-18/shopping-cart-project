@@ -11,9 +11,10 @@ import { Iproduct } from '../../shared/interfaces/iproduct';
 import { Router } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { EventEmitter, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink , RouterLinkActive,FormsModule,TranslatePipe ],
+  imports: [RouterLink , RouterLinkActive,FormsModule,TranslatePipe ,CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -35,7 +36,7 @@ export class NavbarComponent implements OnInit {
  
 
 
-
+ isMenuOpen = false;
 
  searchText: string = '';
 
@@ -81,6 +82,10 @@ export class NavbarComponent implements OnInit {
         console.log(err);
       }
     });
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 //   get filteredProducts() {

@@ -55,13 +55,12 @@ export class CheckoutComponent implements OnInit {
           setTimeout(() => {
             this.success = res.status;
             
-              open(res.session.url, '_self'); // Only open the URL on the browser
+              window.open(res.session.url, '_self'); 
             
           }, 300);
           console.log(res);
         }
         this.isLoading = false;
-          localStorage.setItem('userorders', res.data.user);
 
         
       },
@@ -83,7 +82,7 @@ export class CheckoutComponent implements OnInit {
             }, 300);
 
             if (isPlatformBrowser(this.platformId)){
-              localStorage.setItem('userorders', res.data.user);
+              // localStorage.setItem('userorders', res.data.user);
 
             }
           }

@@ -59,7 +59,7 @@ this.authService.setEmailVerify(this. verifyEmail.value).subscribe({
 
 
   verifyCodeSubmit():void{
-    this.authService.setCodeVerify(this. verifyCode.value).subscribe({
+    this.authService.setCodeVerify(this.verifyCode.value).subscribe({
       next:(res)=>{
         console.log(res);
         if(res.status === 'Success'){

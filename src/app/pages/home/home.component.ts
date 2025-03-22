@@ -178,7 +178,7 @@ brands:Ibrands[] =[];
 
   
   addCartItem(id: string, skipLoading: boolean = false): void {
-    const headers = skipLoading ? { 'skip-loading': 'true' } : {}; // إضافة الهيدر إذا كان التخطي مطلوبًا
+    const headers = skipLoading ? { 'skip-loading': 'true' } : {}; 
   
     this.cartService.addProductToCart(id, headers).subscribe({
       next: (res) => {
@@ -186,6 +186,8 @@ brands:Ibrands[] =[];
         if (res.status === 'success') {
           this.toastrService.success(res.message, 'SUCCESS');
           this.cartService.cartNumber.set(res.numOfCartItems);
+          localStorage.setItem('userorders', res.data.cartOwner);
+
           console.log(this.cartService.cartNumber());
         }
       },

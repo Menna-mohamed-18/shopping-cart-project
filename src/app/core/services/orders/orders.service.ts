@@ -13,17 +13,17 @@ export class OrdersService {
 
   getorder(id:string , data:object):Observable<any>{
 
-    return this.httpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=http://localhost:4200` , 
+    return this.httpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=${window.location.origin}` , 
       {
         shippingAddress: data
     },
 
-    // {
-    //   headers:{
+    {
+      headers:{
 
-    //     token:this.myToken
-    //   }
-    // }
+        token:this.myToken
+      }
+    }
     )
   }
 

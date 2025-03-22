@@ -53,6 +53,8 @@ console.log(this.detailsProduct?.images);
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
+    autoplay:true,
+    autoplayTimeout:2000,
     dots: false,
     navSpeed: 700,
     navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
